@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Text.h";
 #include <limits>
+#include <iostream>
 
 namespace Text
 {
@@ -25,5 +26,16 @@ namespace Text
 	int StringBuilder::getMaxCapacity() 
 	{
 		return maxCapacity;
+	}
+
+	char* StringBuilder::getChunkByCapacity(int capacity)
+	{
+		char* result = new char[capacity];
+		for (int i = 0; i < capacity; i++)
+		{
+			result[i] = '\0';
+		}
+
+		return result;
 	}
 }

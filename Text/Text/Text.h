@@ -14,11 +14,13 @@ namespace Text
 		int getCapacity();
 		int getLenght();
 		int getMaxCapacity();
+		char* getChunkByCapacity(int capacity);
 
 	// Internals 
 	private: 
 		int capacity;
 		int lenght;
 		int maxCapacity;
+		char* chunkChars[];
 	};
 }
