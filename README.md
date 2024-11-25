@@ -1,2 +1,2 @@
 # StringBuilder
-StringBuilder class, C++
+
