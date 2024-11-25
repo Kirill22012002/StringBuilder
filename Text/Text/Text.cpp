@@ -5,11 +5,12 @@
 
 namespace Text
 {
-	StringBuilder::StringBuilder() : capacity(16), lenght(0), maxCapacity(std::numeric_limits<int>::max())
+	StringBuilder::StringBuilder() : capacity(16), lenght(0), maxCapacity(std::numeric_limits<int>::max()), chunkChars(getChunkByCapacity(16))
 	{
 	}
 
-	StringBuilder::StringBuilder(int capacity) : capacity(capacity), lenght(0), maxCapacity(std::numeric_limits<int>::max())
+	StringBuilder::StringBuilder(int capacity) : 
+		capacity(capacity), lenght(0), maxCapacity(std::numeric_limits<int>::max()), chunkChars(getChunkByCapacity(capacity))
 	{
 	}
 
