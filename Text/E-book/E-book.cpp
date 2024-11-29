@@ -7,14 +7,17 @@
 
 int main(int args, char** argv)
 {
-    Text::StringBuilder * sb = new Text::StringBuilder();
+    Text::StringBuilder* sbWithValue = new Text::StringBuilder("012345");
     std::cout << " StringBuilder Properties: ";
-    std::cout << " Default capacity: " << sb->getCapacity();
-    std::cout << " Default max capacity: " << sb->getMaxCapacity();
-    std::cout << " Default lenght: " << sb->getLenght();
+    std::cout << " Default capacity: " << sbWithValue->getCapacity();
+    std::cout << " Default max capacity: " << sbWithValue->getMaxCapacity();
+    std::cout << " Default lenght: " << sbWithValue->getLength();
 
-    // Clean up;
-    delete sb;
+    sbWithValue->Append('?');
+    std::string result = sbWithValue->ToString();
+    std::cout << " Result: " << result;
+
+    delete sbWithValue;
     return 0;
 }
 
